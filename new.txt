@@ -1,0 +1,234 @@
+code
+Gridxm
+Gridym
+RC Flat Slab_StructuralZonem
+RC Flat Slab_FloorZonem
+RC Flat Slab_Concretekg_m2
+RC Flat Slab_Rebarkg_m2
+RC Flat Slab_Precastkg_m2
+RC Flat Slab_Steelworkkg_m2
+RC Flat Slab_Glulamkg_m2
+RC Flat Slab_CLTkg_m2
+RC Flat Slab_Steelwork_PrimaryBeam
+RC Flat Slab_Steelwork_SecondaryBeam
+RC Flat Slab_No_Add_lSecondary
+RC Flat Slab_RC_Glulam_BeamDepthxm
+RC Flat Slab_RC_Glulam_BeamDepthym
+RC Flat Slab_RC_Glulam_BeamWidthxm
+RC Flat Slab_RC_Glulam_BeamWidthym
+RC Flat Slab_Corner Column_Gk_kN
+RC Flat Slab_Corner Column_Qk_kN
+RC Flat Slab_Edge Column_Gk_kN
+RC Flat Slab_Edge Column_Qk_kN
+RC Flat Slab_Internal Column_Gk_kN
+RC Flat Slab_Internal Column_Qk_kN
+PT RC Flat Slab_StructuralZonem
+PT RC Flat Slab_FloorZonem
+PT RC Flat Slab_Concretekg_m2
+PT RC Flat Slab_Rebarkg_m2
+PT RC Flat Slab_Precastkg_m2
+PT RC Flat Slab_Steelworkkg_m2
+PT RC Flat Slab_Glulamkg_m2
+PT RC Flat Slab_CLTkg_m2
+PT RC Flat Slab_Steelwork_PrimaryBeam
+PT RC Flat Slab_Steelwork_SecondaryBeam
+PT RC Flat Slab_No_Add_lSecondary
+PT RC Flat Slab_RC_Glulam_BeamDepthxm
+PT RC Flat Slab_RC_Glulam_BeamDepthym
+PT RC Flat Slab_RC_Glulam_BeamWidthxm
+PT RC Flat Slab_RC_Glulam_BeamWidthym
+PT RC Flat Slab_Corner Column_Gk_kN
+PT RC Flat Slab_Corner Column_Qk_kN
+PT RC Flat Slab_Edge Column_Gk_kN
+PT RC Flat Slab_Edge Column_Qk_kN
+PT RC Flat Slab_Internal Column_Gk_kN
+PT RC Flat Slab_Internal Column_Qk_kN
+RC Rib Slab_StructuralZonem
+RC Rib Slab_FloorZonem
+RC Rib Slab_Concretekg_m2
+RC Rib Slab_Rebarkg_m2
+RC Rib Slab_Precastkg_m2
+RC Rib Slab_Steelworkkg_m2
+RC Rib Slab_Glulamkg_m2
+RC Rib Slab_CLTkg_m2
+RC Rib Slab_Steelwork_PrimaryBeam
+RC Rib Slab_Steelwork_SecondaryBeam
+RC Rib Slab_No_Add_lSecondary
+RC Rib Slab_RC_Glulam_BeamDepthxm
+RC Rib Slab_RC_Glulam_BeamDepthym
+RC Rib Slab_RC_Glulam_BeamWidthxm
+RC Rib Slab_RC_Glulam_BeamWidthym
+RC Rib Slab_Corner Column_Gk_kN
+RC Rib Slab_Corner Column_Qk_kN
+RC Rib Slab_Edge Column_Gk_kN
+RC Rib Slab_Edge Column_Qk_kN
+RC Rib Slab_Internal Column_Gk_kN
+RC Rib Slab_Internal Column_Qk_kN
+Two-way RC Slab_StructuralZonem
+Two-way RC Slab_FloorZonem
+Two-way RC Slab_Concretekg_m2
+Two-way RC Slab_Rebarkg_m2
+Two-way RC Slab_Precastkg_m2
+Two-way RC Slab_Steelworkkg_m2
+Two-way RC Slab_Glulamkg_m2
+Two-way RC Slab_CLTkg_m2
+Two-way RC Slab_Steelwork_PrimaryBeam
+Two-way RC Slab_Steelwork_SecondaryBeam
+Two-way RC Slab_No_Add_lSecondary
+Two-way RC Slab_RC_Glulam_BeamDepthxm
+Two-way RC Slab_RC_Glulam_BeamDepthym
+Two-way RC Slab_RC_Glulam_BeamWidthxm
+Two-way RC Slab_RC_Glulam_BeamWidthym
+Two-way RC Slab_Corner Column_Gk_kN
+Two-way RC Slab_Corner Column_Qk_kN
+Two-way RC Slab_Edge Column_Gk_kN
+Two-way RC Slab_Edge Column_Qk_kN
+Two-way RC Slab_Internal Column_Gk_kN
+Two-way RC Slab_Internal Column_Qk_kN
+One-Way Spanning RC_StructuralZonem
+One-Way Spanning RC_FloorZonem
+One-Way Spanning RC_Concretekg_m2
+One-Way Spanning RC_Rebarkg_m2
+One-Way Spanning RC_Precastkg_m2
+One-Way Spanning RC_Steelworkkg_m2
+One-Way Spanning RC_Glulamkg_m2
+One-Way Spanning RC_CLTkg_m2
+One-Way Spanning RC_Steelwork_PrimaryBeam
+One-Way Spanning RC_Steelwork_SecondaryBeam
+One-Way Spanning RC_No_Add_lSecondary
+One-Way Spanning RC_RC_Glulam_BeamDepthxm
+One-Way Spanning RC_RC_Glulam_BeamDepthym
+One-Way Spanning RC_RC_Glulam_BeamWidthxm
+One-Way Spanning RC_RC_Glulam_BeamWidthym
+One-Way Spanning RC_Corner Column_Gk_kN
+One-Way Spanning RC_Corner Column_Qk_kN
+One-Way Spanning RC_Edge Column_Gk_kN
+One-Way Spanning RC_Edge Column_Qk_kN
+One-Way Spanning RC_Internal Column_Gk_kN
+One-Way Spanning RC_Internal Column_Qk_kN
+Precast Hollowcore with In-situ RC Beams_StructuralZonem
+Precast Hollowcore with In-situ RC Beams_FloorZonem
+Precast Hollowcore with In-situ RC Beams_Concretekg_m2
+Precast Hollowcore with In-situ RC Beams_Rebarkg_m2
+Precast Hollowcore with In-situ RC Beams_Precastkg_m2
+Precast Hollowcore with In-situ RC Beams_Steelworkkg_m2
+Precast Hollowcore with In-situ RC Beams_Glulamkg_m2
+Precast Hollowcore with In-situ RC Beams_CLTkg_m2
+Precast Hollowcore with In-situ RC Beams_Steelwork_PrimaryBeam
+Precast Hollowcore with In-situ RC Beams_Steelwork_SecondaryBeam
+Precast Hollowcore with In-situ RC Beams_No_Add_lSecondary
+Precast Hollowcore with In-situ RC Beams_RC_Glulam_BeamDepthxm
+Precast Hollowcore with In-situ RC Beams_RC_Glulam_BeamDepthym
+Precast Hollowcore with In-situ RC Beams_RC_Glulam_BeamWidthxm
+Precast Hollowcore with In-situ RC Beams_RC_Glulam_BeamWidthym
+Precast Hollowcore with In-situ RC Beams_Corner Column_Gk_kN
+Precast Hollowcore with In-situ RC Beams_Corner Column_Qk_kN
+Precast Hollowcore with In-situ RC Beams_Edge Column_Gk_kN
+Precast Hollowcore with In-situ RC Beams_Edge Column_Qk_kN
+Precast Hollowcore with In-situ RC Beams_Internal Column_Gk_kN
+Precast Hollowcore with In-situ RC Beams_Internal Column_Qk_kN
+Non-Composite Rolled Steel with PCC Planks_StructuralZonem
+Non-Composite Rolled Steel with PCC Planks_FloorZonem
+Non-Composite Rolled Steel with PCC Planks_Concretekg_m2
+Non-Composite Rolled Steel with PCC Planks_Rebarkg_m2
+Non-Composite Rolled Steel with PCC Planks_Precastkg_m2
+Non-Composite Rolled Steel with PCC Planks_Steelworkkg_m2
+Non-Composite Rolled Steel with PCC Planks_Glulamkg_m2
+Non-Composite Rolled Steel with PCC Planks_CLTkg_m2
+Non-Composite Rolled Steel with PCC Planks_Steelwork_PrimaryBeam
+Non-Composite Rolled Steel with PCC Planks_Steelwork_SecondaryBeam
+Non-Composite Rolled Steel with PCC Planks_No_Add_lSecondary
+Non-Composite Rolled Steel with PCC Planks_RC_Glulam_BeamDepthxm
+Non-Composite Rolled Steel with PCC Planks_RC_Glulam_BeamDepthym
+Non-Composite Rolled Steel with PCC Planks_RC_Glulam_BeamWidthxm
+Non-Composite Rolled Steel with PCC Planks_RC_Glulam_BeamWidthym
+Non-Composite Rolled Steel with PCC Planks_Corner Column_Gk_kN
+Non-Composite Rolled Steel with PCC Planks_Corner Column_Qk_kN
+Non-Composite Rolled Steel with PCC Planks_Edge Column_Gk_kN
+Non-Composite Rolled Steel with PCC Planks_Edge Column_Qk_kN
+Non-Composite Rolled Steel with PCC Planks_Internal Column_Gk_kN
+Non-Composite Rolled Steel with PCC Planks_Internal Column_Qk_kN
+Composite Rolled Steel with Metal Decking_StructuralZonem
+Composite Rolled Steel with Metal Decking_FloorZonem
+Composite Rolled Steel with Metal Decking_Concretekg_m2
+Composite Rolled Steel with Metal Decking_Rebarkg_m2
+Composite Rolled Steel with Metal Decking_Precastkg_m2
+Composite Rolled Steel with Metal Decking_Steelworkkg_m2
+Composite Rolled Steel with Metal Decking_Glulamkg_m2
+Composite Rolled Steel with Metal Decking_CLTkg_m2
+Composite Rolled Steel with Metal Decking_Steelwork_PrimaryBeam
+Composite Rolled Steel with Metal Decking_Steelwork_SecondaryBeam
+Composite Rolled Steel with Metal Decking_No_Add_lSecondary
+Composite Rolled Steel with Metal Decking_RC_Glulam_BeamDepthxm
+Composite Rolled Steel with Metal Decking_RC_Glulam_BeamDepthym
+Composite Rolled Steel with Metal Decking_RC_Glulam_BeamWidthxm
+Composite Rolled Steel with Metal Decking_RC_Glulam_BeamWidthym
+Composite Rolled Steel with Metal Decking_Corner Column_Gk_kN
+Composite Rolled Steel with Metal Decking_Corner Column_Qk_kN
+Composite Rolled Steel with Metal Decking_Edge Column_Gk_kN
+Composite Rolled Steel with Metal Decking_Edge Column_Qk_kN
+Composite Rolled Steel with Metal Decking_Internal Column_Gk_kN
+Composite Rolled Steel with Metal Decking_Internal Column_Qk_kN
+Composite Cell Beams with Metal Decking_StructuralZonem
+Composite Cell Beams with Metal Decking_FloorZonem
+Composite Cell Beams with Metal Decking_Concretekg_m2
+Composite Cell Beams with Metal Decking_Rebarkg_m2
+Composite Cell Beams with Metal Decking_Precastkg_m2
+Composite Cell Beams with Metal Decking_Steelworkkg_m2
+Composite Cell Beams with Metal Decking_Glulamkg_m2
+Composite Cell Beams with Metal Decking_CLTkg_m2
+Composite Cell Beams with Metal Decking_Steelwork_PrimaryBeam
+Composite Cell Beams with Metal Decking_Steelwork_SecondaryBeam
+Composite Cell Beams with Metal Decking_No_Add_lSecondary
+Composite Cell Beams with Metal Decking_RC_Glulam_BeamDepthxm
+Composite Cell Beams with Metal Decking_RC_Glulam_BeamDepthym
+Composite Cell Beams with Metal Decking_RC_Glulam_BeamWidthxm
+Composite Cell Beams with Metal Decking_RC_Glulam_BeamWidthym
+Composite Cell Beams with Metal Decking_Corner Column_Gk_kN
+Composite Cell Beams with Metal Decking_Corner Column_Qk_kN
+Composite Cell Beams with Metal Decking_Edge Column_Gk_kN
+Composite Cell Beams with Metal Decking_Edge Column_Qk_kN
+Composite Cell Beams with Metal Decking_Internal Column_Gk_kN
+Composite Cell Beams with Metal Decking_Internal Column_Qk_kN
+Steel Frame with CLT Slabs_StructuralZonem
+Steel Frame with CLT Slabs_FloorZonem
+Steel Frame with CLT Slabs_Concretekg_m2
+Steel Frame with CLT Slabs_Rebarkg_m2
+Steel Frame with CLT Slabs_Precastkg_m2
+Steel Frame with CLT Slabs_Steelworkkg_m2
+Steel Frame with CLT Slabs_Glulamkg_m2
+Steel Frame with CLT Slabs_CLTkg_m2
+Steel Frame with CLT Slabs_Steelwork_PrimaryBeam
+Steel Frame with CLT Slabs_Steelwork_SecondaryBeam
+Steel Frame with CLT Slabs_No_Add_lSecondary
+Steel Frame with CLT Slabs_RC_Glulam_BeamDepthxm
+Steel Frame with CLT Slabs_RC_Glulam_BeamDepthym
+Steel Frame with CLT Slabs_RC_Glulam_BeamWidthxm
+Steel Frame with CLT Slabs_RC_Glulam_BeamWidthym
+Steel Frame with CLT Slabs_Corner Column_Gk_kN
+Steel Frame with CLT Slabs_Corner Column_Qk_kN
+Steel Frame with CLT Slabs_Edge Column_Gk_kN
+Steel Frame with CLT Slabs_Edge Column_Qk_kN
+Steel Frame with CLT Slabs_Internal Column_Gk_kN
+Steel Frame with CLT Slabs_Internal Column_Qk_kN
+CLT Glulam and Steel Column Hybrid_StructuralZonem
+CLT Glulam and Steel Column Hybrid_FloorZonem
+CLT Glulam and Steel Column Hybrid_Concretekg_m2
+CLT Glulam and Steel Column Hybrid_Rebarkg_m2
+CLT Glulam and Steel Column Hybrid_Precastkg_m2
+CLT Glulam and Steel Column Hybrid_Steelworkkg_m2
+CLT Glulam and Steel Column Hybrid_Glulamkg_m2
+CLT Glulam and Steel Column Hybrid_CLTkg_m2
+CLT Glulam and Steel Column Hybrid_Steelwork_PrimaryBeam
+CLT Glulam and Steel Column Hybrid_Steelwork_SecondaryBeam
+CLT Glulam and Steel Column Hybrid_No_Add_lSecondary
+CLT Glulam and Steel Column Hybrid_RC_Glulam_BeamDepthxm
+CLT Glulam and Steel Column Hybrid_RC_Glulam_BeamDepthym
+CLT Glulam and Steel Column Hybrid_RC_Glulam_BeamWidthxm
+CLT Glulam and Steel Column Hybrid_RC_Glulam_BeamWidthym
+CLT Glulam and Steel Column Hybrid_Corner Column_Gk_kN
+CLT Glulam and Steel Column Hybrid_Corner Column_Qk_kN
+CLT Glulam and Steel Column Hybrid_Edge Column_Gk_kN
+CLT Glulam and Steel Column Hybrid_Edge Column_Qk_kN
+CLT Glulam and Steel Column Hybrid_Internal Column_Gk_kN
+CLT Glulam and Steel Column Hybrid_Internal Column_Qk_kN

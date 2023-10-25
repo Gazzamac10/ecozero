@@ -1,0 +1,17 @@
+Description,gk (kN/m²),qk (kN/m²)
+Carpet,0.05,0
+Raised Floor,0.3,0
+Suspended Ceiling,0.15,0
+Residential Suspended Ceiling,0.2,0
+OfficeServices,0.3,0
+Residential Services,0.1,0
+Education Services,0.3,0
+Healthcare Services,0.5,0
+Floating Floor,0.15,0
+Healthcare Flooring,0.05,0
+Healthcare Screed,2.2,0
+Office Areas B1,0,2.5
+Lightweight Partitions,0,1
+Residential A1,0,1.5
+Classrooms C13,0,3
+Healthcare,0,3
