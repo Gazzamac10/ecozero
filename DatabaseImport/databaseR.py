@@ -201,7 +201,6 @@ desired_row_order = [
 # Reorder the rows in the summary DataFrame
 summary_df = summary_df.loc[desired_row_order]
 
-print('it finished')
 
 
 

@@ -1,13 +1,22 @@
 import streamlit as st
 import InputR
+import numpy as np
+from PIL import Image
+import pandas as pd
+from DatabaseImport import databaseR
 
 st.set_page_config(page_title="My Streamlit App", page_icon=":rocket:", layout="wide", initial_sidebar_state="expanded")
-
 
 # Add custom CSS styles
 st.markdown(
     """
     <style>
+        a {
+        color: black;
+        font-family: Adobe Thai;
+        font-size: 18px;
+        text-align: left;
+        }   
         h1 {
             color: white;
             font-family: Adobe Thai;
@@ -80,13 +89,26 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Create the sidebar links
+st.sidebar.markdown('''
+    <h3>Contents</h3>
+    <ul>
+        <li><a href="#Home-1" style="color: white;">Home</a></li>
+        <li><a href="#UserInput-1" style="color: white;">User Input</a></li>
+    </ul>
+''', unsafe_allow_html=True)
 
-
-st.markdown("<h1>ECO.ZERO - Structure</h1>", unsafe_allow_html=True)
+st.markdown('<dummy id="Home-1"></dummy>', unsafe_allow_html=True)
+col1, col2 = st.columns([0.1,0.9])
+with col1:
+    imageecozero  = Image.open('Images/EcoZero.JPG')
+    resized_image = imageecozero.resize((150, 150))
+    st.image(resized_image)
+with col2:
+    st.markdown("<h1>ECO.ZERO - Structure</h1>", unsafe_allow_html=True)
+    st.markdown('<dummy id="UserInput-1"></dummy>', unsafe_allow_html=True)
 #st.image('MV5BNzlhYjEzOGItN2MwNS00ODRiLWE5OTItYThiNmJlMTdmMzgxXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg')
 st.divider()
-
-
 col1, col2, col3, col4 = st.columns([0.2,0.2,0.2,0.4])
 with col1:
     st.markdown("<h2>USER INPUT</h2>", unsafe_allow_html=True)
@@ -97,6 +119,10 @@ with col1:
     st.markdown("<p1>Geometry</p1>", unsafe_allow_html=True)
     gridXarray = st.selectbox('Grid_X', InputR.gridXArr)
     gridYarray = st.selectbox('Grid_Y', InputR.gridYArr)
+    baysXarray = st.selectbox('Bays_X', InputR.bayXArr)
+    baysYarray = st.selectbox('Bays_Y', InputR.bayYArr)
+    storeys = st.text_input('Storeys', '2')
+
 
 with col2:
     st.markdown("<h2></h2>", unsafe_allow_html=True)
@@ -115,5 +141,6 @@ with col3:
 with col4:
     st.markdown("<h2>DESIGN STATUS CHECK</h2>", unsafe_allow_html=True)
 
-
 st.divider()
+
+st.write(databaseR.summary_df)

@@ -23,7 +23,7 @@ bayX = bayXArr[int((len(bayXArr))/2)] # Default value as mid of array
 bayYArr = numArray(1,20)
 bayY = bayYArr[int((len(bayYArr))/2)] # Default value as mid of array
 
-storeys = 4 #  default value
+storeys = '4' #  default value
 floorToCeiling = 3 # default value
 
 #Engineering Parameters

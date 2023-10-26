@@ -1,6 +1,5 @@
 import pandas as pd
 from azure.data.tables import TableServiceClient
-from sendtoblob import *
 
 
 connection_string = "DefaultEndpointsProtocol=https;AccountName=ifcblobstorage;AccountKey=pfjYYtnqOTPPKPJFKmnPouSbb8Nxx/dA3HbQ4tlBDQepGeNEpzrwtxwFp3agDHOQjAbQV3RVLAwJ+ASt5m5Vsw==;EndpointSuffix=core.windows.net"
@@ -48,8 +47,8 @@ def query_blob_table_to_dataframe(column_names):
 
 # Example usage:
 #selected_columns = ["code","Gridxm","Gridym"]  # Replace with your desired column names
-selected_columns = get_all_column_headers() # Replace with your desired column names
-result_dataframe = query_blob_table_to_dataframe(selected_columns)
+#selected_columns = get_all_column_headers() # Replace with your desired column names
+#result_dataframe = query_blob_table_to_dataframe(selected_columns)
 
 # Now, you can work with the 'result_dataframe' as a Pandas DataFrame
 #print(result_dataframe.columns.tolist())

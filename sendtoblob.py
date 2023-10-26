@@ -62,12 +62,6 @@ replace_column_names(df,"\n",'_')
 row_dicts = df.to_dict(orient='records')
 list = row_dicts
 
-
-print(df.columns)
-
-
-
-
 rk = df['code'].tolist()
 
 #save_list_to_txt('newheaders.txt',df.columns)

@@ -41,7 +41,6 @@ rcColumnLoads = definitions.factoredLoads(rcColumnLoads,gk,qk,storeys)
 
 #Column Design
 rcGrade = int(concMix.split('/')[1][:2])
-print(rcGrade)
 
 planArea = floorArea
 storeyHeight = floorToCeiling
@@ -113,5 +112,5 @@ pileLoads['pLQkCor'] = pileLoads['CornerColumn_Qk_kN']*storeys
 internal_columns_to_keep = ['pLGkInt','pLQkInt','pLGkEd','pLQkEd','pLGkCor','pLQkCor']
 pileLoads = pileLoads[internal_columns_to_keep]
 
-print(ColumnSummary)
+
 
