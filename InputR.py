@@ -13,16 +13,16 @@ country = 'UK'
 
 #Geometry
 gridXArr = numArray(5,12)
-gridX = gridXArr[int((len(gridXArr))/2)] # Default value as mid of array
+gridX = 7# Default value as mid of array
 
 gridYArr = numArray(5,13)
-gridY = gridYArr[int((len(gridYArr))/2)] # Default value as mid of array
+gridY = 7 # Default value as mid of array
 
 bayXArr= numArray(1,20)
-bayX = bayXArr[int((len(bayXArr))/2)] # Default value as mid of array
+bayX = 5 # Default value as mid of array
 
 bayYArr = numArray(1,20)
-bayY = bayYArr[int((len(bayYArr))/2)] # Default value as mid of array
+bayY = 5 # Default value as mid of array
 
 storeys = 4 #  default value
 floorToCeiling = 3 # default value
@@ -78,12 +78,12 @@ typology = typologyArr[3] # default value
 #GUI Inputs
 xGrid = gridX
 yGrid = gridY
-floorArea = 4 * xGrid * yGrid
+floorArea = (bayX * xGrid) * (bayY * yGrid)
 floorCeilingHeight = floorToCeiling
 noOfStoreys = storeys
-columnsInternal = 1 #default
-columnCorners = 4 #default
-columnEdges = 4 #default
+#columnsInternal = 1 #default
+#columnCorners = 4 #default
+#columnEdges = 4 #default
 structuralSystem = typology
 perimiter = 56 # default value
 GIA = 540 #default value

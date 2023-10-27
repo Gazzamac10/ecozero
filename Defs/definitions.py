@@ -66,4 +66,12 @@ def query_azure_table_to_dataframe(connection_string, table_name):
         return None
 
 
+def ColumnNumbers(bayX,bayY):
+    columnCorners = 4
+    columnEdges = ((bayX-1)*(bayY-1))-columnCorners
+    columnsInternal = (bayX*bayY)-columnCorners-columnEdges
+    return columnsInternal,columnCorners,columnEdges
 
+def floorArea(bayX,bayY,gridX,gridY):
+    floor = (gridX*bayX)*(gridY*bayY)
+    return floor

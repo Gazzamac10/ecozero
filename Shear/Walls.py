@@ -1,6 +1,6 @@
 import pandas as pd
 from InputR import building_use, designTypology, floorToCeiling
-from DatabaseImport import databaseR
+#from DatabaseImport import databaseR
 
 #Static Data
 terCat = {
@@ -31,38 +31,38 @@ typologyAlt = "RCFlatSlab" # this can be changed to be the value from the summar
 
 #the def needs to start here and include typologyalt
 
-floorFinishServiceZone = databaseR.ffSZ
-
-if building_use in floorFinishServiceZone.columns:
-    selected_column = floorFinishServiceZone[building_use].astype(float) * 0.001
-    selected_column_name = building_use  # Store the selected column name
-    description_column = floorFinishServiceZone['Description']  # Get the 'Description' column
-    floorZones = pd.DataFrame({'Description': description_column, selected_column_name: selected_column})
-    
-else:
-    print(f"'{building_use}' is not a valid column name.")
-    
-#find the type name to match, because they don't line up
-index = designTypology['altTypes'].index(typologyAlt)
-corresponding_type = designTypology['Type'][index]
-
-# Filter the DataFrame by matching the "Description" column
-filtered_rows = floorZones[floorZones['Description'] == corresponding_type]
-
-#get the value of the services and finisheszone
-if not filtered_rows.empty:
-    sfZone = filtered_rows.iloc[0, -1]  
-    
-else:
-    print(f"No matching rows found for '{corresponding_type}'.")
-    
-
-if typologyAlt in databaseR.summary_df.index:
-    # Use the typologyAlt to find the corresponding "StructuralZone" value
-    structural_zone = databaseR.summary_df.loc[typologyAlt, 'StructuralZonem']
-else:
-    print(f"No match found for '{typologyAlt}' in the summary_df index.")
-
-storeyHeight = floorToCeiling+structural_zone+sfZone
-
-#STOP REDO THE CARBON FACTORS
+#floorFinishServiceZone = databaseR.ffSZ
+#
+#if building_use in floorFinishServiceZone.columns:
+#    selected_column = floorFinishServiceZone[building_use].astype(float) * 0.001
+#    selected_column_name = building_use  # Store the selected column name
+#    description_column = floorFinishServiceZone['Description']  # Get the 'Description' column
+#    floorZones = pd.DataFrame({'Description': description_column, selected_column_name: selected_column})
+#    
+#else:
+#    print(f"'{building_use}' is not a valid column name.")
+#    
+##find the type name to match, because they don't line up
+#index = designTypology['altTypes'].index(typologyAlt)
+#corresponding_type = designTypology['Type'][index]
+#
+## Filter the DataFrame by matching the "Description" column
+#filtered_rows = floorZones[floorZones['Description'] == corresponding_type]
+#
+##get the value of the services and finisheszone
+#if not filtered_rows.empty:
+#    sfZone = filtered_rows.iloc[0, -1]  
+#    
+#else:
+#    print(f"No matching rows found for '{corresponding_type}'.")
+#    
+#
+#if typologyAlt in databaseR.summary_df.index:
+#    # Use the typologyAlt to find the corresponding "StructuralZone" value
+#    structural_zone = databaseR.summary_df.loc[typologyAlt, 'StructuralZonem']
+#else:
+#    print(f"No match found for '{typologyAlt}' in the summary_df index.")
+#
+#storeyHeight = floorToCeiling+structural_zone+sfZone
+#
+##STOP REDO THE CARBON FACTORS
