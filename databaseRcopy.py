@@ -7,6 +7,8 @@ from Defs import definitions
 # Suppress FutureWarnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
+
+
 gridXdb = min(InputR.gridX,InputR.gridY)
 gridYdb = max(InputR.gridX,InputR.gridY)
 buildingUseDb = InputR.building_use
@@ -95,7 +97,6 @@ new_row_names = [
     'Two_wayRCSlab'
 ]
 
-#new_row_names = InputR.designTypology['altTypes']
 
 # Create a the summary DataFrame with the new row names
 summary_df = pd.DataFrame(index=new_row_names)
@@ -184,13 +185,4 @@ for row in summary_df.index:
 # Reorder the rows in the summary DataFrame
 summary_df = summary_df.loc[InputR.designTypology['altTypes']]
 
-#create a dataaframe of the FloorFinishesServicesZone
-
-ffSZ = definitions.query_azure_table_to_dataframe(connString,floorFinishesServiceZoneTable)
-
-
-
-
-
-
-
+print(summary_df)

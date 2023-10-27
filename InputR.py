@@ -1,3 +1,4 @@
+
 def numArray(start,end):
     arr = []
     for i in range(start,end+1):
@@ -23,7 +24,7 @@ bayX = bayXArr[int((len(bayXArr))/2)] # Default value as mid of array
 bayYArr = numArray(1,20)
 bayY = bayYArr[int((len(bayYArr))/2)] # Default value as mid of array
 
-storeys = '4' #  default value
+storeys = 4 #  default value
 floorToCeiling = 3 # default value
 
 #Engineering Parameters
@@ -97,3 +98,12 @@ lengthofSecondaryBeams = 54 #default to be overwritten with calc
 perReinforcement = 4 # default value
 gk = 1.35
 qk = 1.5
+
+
+#Typologies
+designTypology ={
+    "Type":['RC Flat Slab','PT Flat Slab','RC Rib Slab','Two-way Slab','One-Way Spanning X','PCC Beams and Planks','Non-Composite Rolled Steel with PCC Planks','Composite Rolled Steel with Metal Decking','Composite Cell Beams with Metal Decking','Rolled Steel Beams with CLT Panels','Glulam Beams with CLT Panels'],
+    "Number":[1,2,3,4,5,6,7,8,9,10,11],
+    "altTypes":['RCFlatSlab','PTRCFlatSlab','RCRibSlab','Two_wayRCSlab','One_WaySpanningRC','PrecastHollowcorewithIn_situRCBeams','Non_CompositeRolledSteelwithPCCPlanks','CompositeRolledSteelwithMetalDecking','CompositeCellBeamswithMetalDecking','SteelFramewithCLTSlabs','CLTGlulamandSteelColumnHybrid']
+    
+}

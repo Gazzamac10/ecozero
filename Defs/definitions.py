@@ -1,4 +1,6 @@
 from azure.data.tables import TableServiceClient
+from azure.core.exceptions import HttpResponseError
+import pandas as pd
 
 def factoredLoads(df,gk,qk,storeys):
     df['CornerNed'] = (gk * df['CornerColumn_Gk_kN'] + qk * df['CornerColumn_Qk_kN']) * storeys
@@ -41,5 +43,27 @@ def get_entity_keys(entities):
         key_names.update(entity.keys())
 
     return list(key_names)
+
+
+def query_azure_table_to_dataframe(connection_string, table_name):
+    try:
+        # Create a TableServiceClient using the connection string
+        service_client = TableServiceClient.from_connection_string(connection_string)
+
+        # Get a reference to the table
+        table_client = service_client.get_table_client(table_name)
+
+        # Query the table and retrieve results as a list of dictionaries
+        entities = list(table_client.list_entities())
+
+        # Convert the list of entities to a DataFrame
+        df = pd.DataFrame(entities)
+
+        return df
+
+    except HttpResponseError as e:
+        print(f"Error: {e}")
+        return None
+
 
 

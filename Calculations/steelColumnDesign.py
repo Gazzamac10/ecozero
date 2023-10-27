@@ -1,5 +1,5 @@
 import pandas as pd
-from InputR import storeys, concMix, perReinforcement, floorArea, building_use, building_useArr, floorToCeiling, columnsInternal, columnCorners, columnEdges, gk, qk
+from InputR import storeys, gk, qk
 from DatabaseImport import databaseR
 from Defs import definitions
 import pandas as pd
