@@ -4,6 +4,8 @@ from azure.data.tables import TableServiceClient
 from Defs import definitions
 
 #Rebuild of DatabaseR for Streamlist
+connection_string = "DefaultEndpointsProtocol=https;AccountName=ifcblobstorage;AccountKey=pfjYYtnqOTPPKPJFKmnPouSbb8Nxx/dA3HbQ4tlBDQepGeNEpzrwtxwFp3agDHOQjAbQV3RVLAwJ+ASt5m5Vsw==;EndpointSuffix=core.windows.net"
+
 
 #all inputs to def are from required Inputs
 def SummaryTable(gridX,gridY,building_use,facadeType,floorToCeiling,designTypology):
@@ -19,7 +21,7 @@ def SummaryTable(gridX,gridY,building_use,facadeType,floorToCeiling,designTypolo
 
     #Loading Schedule
     # Connection string and table name
-    connection_string = "DefaultEndpointsProtocol=https;AccountName=ifcblobstorage;AccountKey=pfjYYtnqOTPPKPJFKmnPouSbb8Nxx/dA3HbQ4tlBDQepGeNEpzrwtxwFp3agDHOQjAbQV3RVLAwJ+ASt5m5Vsw==;EndpointSuffix=core.windows.net"
+    global connection_string 
     facadeTable = "LoadingFacade"
 
 
@@ -166,6 +168,16 @@ def SummaryTable(gridX,gridY,building_use,facadeType,floorToCeiling,designTypolo
     # Reorder the rows in the summary DataFrame
     summary_df = summary_df.loc[designTypology['altTypes']]
     return summary_df
+
+def tableDB(tabName):
+    global connection_string
+    tabledatabase = definitions.query_azure_table_to_dataframe(connection_string,tabName)
+    return tabledatabase
+
+
+
+
+
 
 
 

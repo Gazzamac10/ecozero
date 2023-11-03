@@ -3,11 +3,16 @@
 from DatabaseImport import databaseSL
 from Calculations import  rcColumnDesignSL
 from Shear import Walls
-from InputR import designTypology, gridX,gridY,building_use,facadeType, floorToCeiling, designTypology, gk,qk,concMix,storeys,floorArea,perReinforcement,building_use,bayX,bayY
+from InputR import stratumThicknessL1,depth,averageSurfaceLevel,groundWaterLevel, stratumType, stratumThicknessL2,stratumThicknessL3,stratumThicknessL4,groundWaterLevel,designTypology, gridX,gridY,building_use,facadeType, floorToCeiling, designTypology, gk,qk,concMix,storeys,floorArea,perReinforcement,building_use,bayX,bayY, averageSurfaceLevel
+from Ground import Pile
+
+print(Pile.pileGroundModel)
+print(Pile.groundwaterLevel)
 
 
-#print(databaseSL.SummaryTable(gridX,gridY,building_use,facadeType,floorToCeiling,designTypology))
-db = (databaseSL.SummaryTable(gridX,gridY,building_use,facadeType,floorToCeiling,designTypology))
-columnDesign = rcColumnDesignSL.rcColumnDesign(db,gk,qk,concMix,storeys,floorToCeiling,perReinforcement,building_use,bayX,bayY,gridX,gridY)
-print(columnDesign[1])
+
+
+
+
+
 

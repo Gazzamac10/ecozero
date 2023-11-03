@@ -1,0 +1,23 @@
+﻿Rock or Soil Type,Type of Material,Unit Weight Saturated ,Unit Weight Dry ,Undrained Shear Strength,Internal Angle of Friction,Uniaxial Compressive Strength,Unconfined Compressive Strength_DryChalk,Unconfined Compressive Strength_Saturated Chalk,SPT N Value for Chalk
+Very Soft Clay,Cohesive,16,16,0,0,0,0,0,0
+Made Ground,Granular,18,18,0,0,0,0,0,0
+Soft Clay,Cohesive,17,17,20,0,0,0,0,0
+Firm Clay,Cohesive,18.5,18.5,40,0,0,0,0,0
+Stiff Clay,Cohesive,20,20,75,0,0,0,0,0
+Very Stiff Clay,Cohesive,21.5,21.5,150,0,0,0,0,0
+Hard Clay,Cohesive,22.5,22.5,300,0,0,0,0,0
+Silt,Granular,19.7,18.2,0,28,0,0,0,0
+Loose Sand_Gravel,Granular,19,16.5,0,30,0,0,0,0
+Medium Sand_Gravel,Granular,19.5,17,0,33,0,0,0,0
+Dense Sand_Gravel,Granular,20.3,18,0,38,0,0,0,0
+Low Density Chalk,Chalk,18.8,14.7,0,0,0,6300,3100,10
+Medium Density Chalk,Chalk,20.2,15.9,0,0,0,11000,5200,30
+High Density Chalk,Chalk,22.2,17.9,0,0,0,17000,8200,50
+None,None,0,0,0,0,0,0,0,0
+Extremely Weak Rock,Rock,20,0,0,0,625,0,0,0
+Very Weak Rock,Rock,22,0,0,0,2500,0,0,0
+Weak Rock,Rock,24,0,0,0,15000,0,0,0
+Medium Strong Rock,Rock,24,0,0,0,"37,500",0,0,0
+Strong Rock,Rock,26,0,0,0,75000,0,0,0
+Very Strong Rock,Rock,27,0,0,0,175000,0,0,0
+Extremely Strong Rock,Rock,29,0,0,0,250000,0,0,0

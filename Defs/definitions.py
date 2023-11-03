@@ -2,6 +2,8 @@ from azure.data.tables import TableServiceClient
 from azure.core.exceptions import HttpResponseError
 import pandas as pd
 
+
+
 def factoredLoads(df,gk,qk,storeys):
     df['CornerNed'] = (gk * df['CornerColumn_Gk_kN'] + qk * df['CornerColumn_Qk_kN']) * storeys
     df['EdgeNed'] = (gk * df['EdgeColumn_Gk_kN'] + qk * df['EdgeColumn_Qk_kN']) * storeys

@@ -94,7 +94,7 @@ st.markdown(
 st.markdown('<dummy id="Home-1"></dummy>', unsafe_allow_html=True)
 col1, col2 = st.columns([0.1,0.9])
 with col1:
-    imageecozero  = Image.open('EcoZero.jpg')
+    imageecozero  = Image.open('Images/EcoZero.JPG')
     resized_image = imageecozero.resize((150, 150))
     st.image(resized_image)
 with col2:

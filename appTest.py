@@ -7,6 +7,7 @@ from DatabaseImport import  databaseSL
 from Calculations import rcColumnDesignSL
 from Defs import definitions
 from tools import graph_maker
+from Ground import GroundModel
 
 st.set_page_config(page_title="My Streamlit App", page_icon=":rocket:", layout="wide", initial_sidebar_state="expanded")
 
@@ -117,7 +118,7 @@ col1, col2 = st.sidebar.columns(2)
 with col1:
     gridXarray = st.selectbox('Grid_X', InputR.gridXArr)
     baysXarray = st.selectbox('Bays_X', InputR.bayXArr)
-    storeys = st.text_input('Storeys', '')
+    storeys = st.text_input('Storeys', '1')
 with col2:
     gridYarray = st.selectbox('Grid_Y', InputR.gridYArr)
     baysYarray = st.selectbox('Bays_Y', InputR.bayYArr)
@@ -131,6 +132,7 @@ Piling_Meth = st.sidebar.selectbox('Piling_Methodology', InputR.pileMethod)
 db =databaseSL.SummaryTable(gridXarray,gridYarray,Building_Use,InputR.facadeType,float(floorToCeiling),InputR.designTypology)
 st.write(db)
 
+#RC Columns
 #from InputR import storeys, concMix, perReinforcement, building_use, building_useArr, floorToCeiling, columnsInternal, columnCorners, columnEdges, gk, qk, bayX,bayY, gridX, gridY
 columnDesign = rcColumnDesignSL.rcColumnDesign(db,InputR.gk,InputR.qk,InputR.concMix,float(storeys),float(floorToCeiling),InputR.perReinforcement,Building_Use,int(baysXarray),int(baysYarray),gridXarray,gridYarray)
 rcColumnLoads = columnDesign[0]
@@ -140,8 +142,37 @@ CornerRcColumn = columnDesign[3]
 ColumnSummary = columnDesign[4]
 pileLoads = columnDesign[5]
 
+#GroundModel - all inputs can be considered Ground Inputs
+gmdb = databaseSL.tableDB('GroundModelDB')
+#Gonna need this variable as a user input
+basementDepth = InputR.depth
 
-st.write(InternalRcColumn)
+#Inputs need to be replaced by user drop downs chosed from the stratumType and StratumThickness Arrays in InputR
+#Layer 1 
+layer1 = InputR.stratumType[0]
+stratumThicknessL1 = InputR.stratumThicknessL1
+#Layer 2
+layer2 = InputR.stratumType[2]
+stratumThicknessL2 = InputR.stratumThicknessL2
+#Layer 3
+layer3 = InputR.stratumType[6]
+stratumThicknessL3 = InputR.stratumThicknessL3
+#Layer 4
+layer4 = InputR.stratumType[1]
+stratumThicknessL4 = InputR.stratumThicknessL4
+
+layers = [layer1,layer2,layer3,layer4]
+layerThickness = [stratumThicknessL1,stratumThicknessL2,stratumThicknessL3,stratumThicknessL4]
+
+#Average Surface Level and Ground Water Level should be user inputs, default surface level 0, default groundwater level 0
+groundModelTable = GroundModel.gmSurfaceLevelDF(layers,layerThickness,gmdb,InputR.averageSurfaceLevel,InputR.groundWaterLevel)
+
+
+basementGroundModelTable = GroundModel.gmBasementDF(basementDepth,layers,layerThickness,gmdb,InputR.averageSurfaceLevel,InputR.groundWaterLevel)
+
+
+
+st.write(groundModelTable)
 
 InternalRcColumn = InternalRcColumn.reset_index()
 InternalRcColumn = InternalRcColumn.rename(columns={'index': 'Typology'})

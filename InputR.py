@@ -33,12 +33,16 @@ concMixArr = ['C32/40 - CEM I (OPC)','C32/40 - 25% GGBS', 'C32/40 - 50% GGBS','C
 concMix = concMixArr[0] #  Default value
 steelManufacture = ['Basic Oxygen Furnace','Electric Arc Furnace']
 
-#GroundModelInputs
+#GroundModelInputs - 
+#Note - Rock is in the ground model data but is disabled in the calculation
 stratumType = ['Made Ground','Soft Clay','Firm Clay','Stiff Clay','Very Stiff Clay','Hard Clay','Silt','Loose Sand/Gravel','Medium Sand/Gravel','Dense Sand/Gravel','Low Density Chalk','Medium Density Chalk','High Density Chalk','None']
-stratumThickness = 1 # default value m
+stratumThicknessL1 = 6 # default value m
+stratumThicknessL2 = 6 # default value m
+stratumThicknessL3 = 6 # default value m
+stratumThicknessL4 = 0 # default value m
 
-averageSurfaceLevel = 0 # default value m
-groundwaterLevel = 0 # default value m
+averageSurfaceLevel = 5 # default value m
+groundWaterLevel = 20 # default value m
 
 #Transfer Deck Requicments
 
