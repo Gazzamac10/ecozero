@@ -9,9 +9,9 @@ from tools import graph_maker
 from tools import sidebar_module  # Import your sidebar module
 from tools import input
 
-st.set_page_config(page_title="Gaz.Database-Structure", page_icon=":rocket:", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Eco.Zero-Structure", page_icon=":rocket:", layout="wide", initial_sidebar_state="expanded")
 
-with open( "Styling\styles.css" ) as css:
+with open( "Styling/styles.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 col1, col2, col3 = st.columns([0.1,0.05,0.85])
