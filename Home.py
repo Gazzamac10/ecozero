@@ -15,10 +15,10 @@ with open( "Styling/styles.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
 
 col1, col2, col3 = st.columns([0.1,0.05,0.85])
-#with col1:
-    #imageecozero  = Image.open('EcoZero.JPG')
-    #resized_image = imageecozero.resize((200, 200))
-    #st.image(resized_image)
+with col1:
+    imageecozero  = Image.open('images/EcoZero.jpg')
+    resized_image = imageecozero.resize((200, 200))
+    st.image(resized_image)
 with col3:
     st.markdown("<h1>Eco.Zero - Structure</h1>", unsafe_allow_html=True)
 
