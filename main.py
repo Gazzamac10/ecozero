@@ -7,7 +7,8 @@ from InputR import stratumThicknessL1,depth,averageSurfaceLevel,groundWaterLevel
 from Ground import Pile
 
 print(Pile.pileGroundModel)
-print(Pile.groundwaterLevel)
+
+
 
 
 

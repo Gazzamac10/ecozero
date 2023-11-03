@@ -1,91 +1,52 @@
 import streamlit as st
 from tools import input
 
-Project_Ref = ''
-Building_Use = 'Office'
-gridXarray = 5
-gridYarray = 5
-baysXarray = 5
-baysXarray = 5
-baysYarray = 5
-Storeys = 2
-floorToCeiling = 3
-Piling_Meth = 'All Types'
-concMix = 'C32/40 - CEM I (OPC)'
-steelManufacture = 'Basic Oxygen Furnace'
-Layer1 = 'Made Ground'
-stratumThicknessL1 = '6'
-Layer2 = 'Firm Clay'
-stratumThicknessL2 = '6'
-Layer3 = 'Medium Sand/Gravel'
-stratumThicknessL3 = '30'
-Layer4 = 'Very Stiff Clay'
-stratumThicknessL4 = '6'
-averageSurfaceLevel = '5'
-groundWaterLevel = '20'
-
-
 
 def sidebar_inputs():
     
-    global Project_Ref
-    global Building_Use
-    global gridXarray
-    global gridYarray
-    global baysXarray
-    global baysYarray
-    global Storeys
-    global floorToCeiling
-    global Piling_Meth
-    global concMix
-    global steelManufacture
-    global Layer1
-    global stratumThicknessL1
-    global Layer2
-    global stratumThicknessL2
-    global Layer3
-    global stratumThicknessL3
-    global Layer4
-    global stratumThicknessL4
-    global averageSurfaceLevel
-    global groundWaterLevel
+    session = st.session_state
     
     st.sidebar.markdown('''<h3>USER INPUT</h3>''', unsafe_allow_html=True)
     st.sidebar.markdown('''<h3>Project Data</h3>''', unsafe_allow_html=True)
-    Project_Ref = st.sidebar.text_input('Project Reference', '')
+    
+    session.Project_Ref = st.sidebar.text_input('Project Reference', session.get('Project_Ref', ''))
+    
     col1, col2 = st.sidebar.columns(2)
     with col1:
-        Building_Use = st.selectbox('Building Use', input.building_useArr, index=input.building_useArr.index(Building_Use))
+        session.Building_Use = st.selectbox('Building Use', input.building_useArr, index=input.building_useArr.index(session.get('Building_Use', 'Office')))
     with col2:
         st.text_input('Country', 'UK')
+    
     st.sidebar.markdown('''<h3>Geometry</h3>''', unsafe_allow_html=True)
+    
     col1, col2 = st.sidebar.columns(2)
     with col1:
-        gridXarray = st.selectbox('Grid_X', input.gridXArr, index=input.gridXArr.index(gridXarray))
-        baysXarray = st.selectbox('Bays_X', input.bayXArr, index=input.bayXArr.index(baysXarray))
-        Storeys = st.text_input('Storeys', str(Storeys))
+        session.gridXarray = st.selectbox('Grid_X', input.gridXArr, index=input.gridXArr.index(session.get('gridXarray', 5)))
+        session.baysXarray = st.selectbox('Bays_X', input.bayXArr, index=input.bayXArr.index(session.get('baysXarray', 5)))
+        session.Storeys = st.text_input('Storeys', session.get('Storeys', '2'))
+    
     with col2:
-        gridYarray = st.selectbox('Grid_Y', input.gridYArr, index=input.gridYArr.index(gridYarray))
-        baysYarray = st.selectbox('Bays_Y', input.bayYArr, index=input.bayYArr.index(baysYarray))
-        floorToCeiling = st.sidebar.text_input('Floor To Ceiling Height', str(floorToCeiling))
+        session.gridYarray = st.selectbox('Grid_Y', input.gridYArr, index=input.gridYArr.index(session.get('gridYarray', 5)))
+        session.baysYarray = st.selectbox('Bays_Y', input.bayYArr, index=input.bayYArr.index(session.get('baysYarray', 5)))
+        session.floorToCeiling = st.sidebar.text_input('Floor To Ceiling Height', session.get('floorToCeiling', '3'))
 
     #st.sidebar.divider()
     with st.sidebar.expander('Engineering Data'):
-        Piling_Meth = st.selectbox('Piling_Methodology', input.pileMethod, index=input.pileMethod.index(Piling_Meth))
-        concMix = st.selectbox('Concrete Mix', input.concMixArr, index=input.concMixArr.index(concMix))
-        steelManufacture = st.selectbox('Steel Manufacture', input.steelManufacture, index=input.steelManufacture.index(steelManufacture))
+        session.Piling_Meth = st.selectbox('Piling_Methodology', input.pileMethod, index=input.pileMethod.index(session.get('Piling_Meth', 'All Types')))
+        session.concMix = st.selectbox('Concrete Mix', input.concMixArr, index=input.concMixArr.index(session.get('concMix', 'C32/40 - CEM I (OPC)')))
+        session.steelManufacture = st.selectbox('Steel Manufacture', input.steelManufacture, index=input.steelManufacture.index(session.get('steelManufacture', 'Basic Oxygen Furnace')))
     
     with st.sidebar.expander('Ground Model Inputs'):
         col1, col2 = st.columns(2)
         with col1:
-            Layer1 = st.selectbox('Layer 1', input.stratumType, index=input.stratumType.index(Layer1))
-            Layer2 = st.selectbox('Layer 2', input.stratumType, index=input.stratumType.index(Layer2))
-            Layer3 = st.selectbox('Layer 3', input.stratumType, index=input.stratumType.index(Layer3))
-            Layer4 = st.selectbox('Layer 4', input.stratumType, index=input.stratumType.index(Layer4))
+            session.Layer1 = st.selectbox('Layer 1', input.stratumType, index=input.stratumType.index(session.get('Layer1', 'Made Ground')))
+            session.Layer2 = st.selectbox('Layer 2', input.stratumType, index=input.stratumType.index(session.get('Layer2', 'Firm Clay')))
+            session.Layer3 = st.selectbox('Layer 3', input.stratumType, index=input.stratumType.index(session.get('Layer3', 'Medium Sand/Gravel')))
+            session.Layer4 = st.selectbox('Layer 4', input.stratumType, index=input.stratumType.index(session.get('Layer4', 'Very Stiff Clay')))
         with col2:
-            stratumThicknessL1 = st.text_input('Thickness L1', str(stratumThicknessL1))
-            stratumThicknessL2 = st.text_input('Thickness L2', str(stratumThicknessL2))
-            stratumThicknessL3 = st.text_input('Thickness L3', str(stratumThicknessL3))
-            stratumThicknessL4 = st.text_input('Thickness L4', str(stratumThicknessL4))
+            session.stratumThicknessL1 = st.text_input('Thickness L1', session.get('stratumThicknessL1', '6'))
+            session.stratumThicknessL2 = st.text_input('Thickness L2', session.get('stratumThicknessL2', '6'))
+            session.stratumThicknessL3 = st.text_input('Thickness L3', session.get('stratumThicknessL3', '30'))
+            session.stratumThicknessL4 = st.text_input('Thickness L4', session.get('stratumThicknessL4', '6'))
             
-        averageSurfaceLevel = st.text_input('Average Surface level', str(averageSurfaceLevel))
+        session.averageSurfaceLevel = st.text_input('Average Surface level', session.get('averageSurfaceLevel', '5'))
