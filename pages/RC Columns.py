@@ -13,10 +13,10 @@ def execute():
         
         
     col1, col2 = st.columns([0.1,0.9])
-    with col1:
-        imageecozero  = Image.open('images/EcoZero.JPG')
-        resized_image = imageecozero.resize((150, 150))
-        st.image(resized_image)
+    # col1:
+        #imageecozero  = Image.open('images/EcoZero.JPG')
+        #resized_image = imageecozero.resize((150, 150))
+        #st.image(resized_image)
     with col2:
         st.markdown("<h1>RC Column - Calculations</h1>", unsafe_allow_html=True)
     #st.image('MV5BNzlhYjEzOGItN2MwNS00ODRiLWE5OTItYThiNmJlMTdmMzgxXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg')
