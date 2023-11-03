@@ -1,6 +1,6 @@
 import streamlit as st
 from tools import graph_maker
-from tools import sidebar_module2
+from tools import sidebar_module
 
 with open( "Styling/styles.css" ) as css:
     st.markdown( f'<style>{css.read()}</style>' , unsafe_allow_html= True)
@@ -17,4 +17,4 @@ with col2:
 st.divider()
 
 # Create an instance of the SidebarInputs class
-sidebar_module2.sidebar_inputs()
+sidebar_module.sidebar_inputs()
